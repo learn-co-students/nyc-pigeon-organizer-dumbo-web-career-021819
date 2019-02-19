@@ -5,8 +5,8 @@ def nyc_pigeon_organizer(data)
   
   new_hash = {}
   
-  data.each do |property, hash|         #pigeon list , color
-    hash.each do |attribute, array|     #color , purple
+  data.each do |property, hash|         #color , purple => ["Theo","Peter Jr." , "Luckyat"]
+    hash.each do |attribute, array|     # purple , ["Theo","Peter Jr." , "Luckyat"]
       array.each do |name|              # "Theo" , "Peter Jr." , "Ms. K"
         
         
@@ -22,7 +22,7 @@ def nyc_pigeon_organizer(data)
         if !new_hash[name][property].include?(attribute)
           new_hash[name][property] << attribute.to_s
         end
-        
+        #binding.pry
         
       end
     end
